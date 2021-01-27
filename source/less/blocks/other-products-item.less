@@ -1,0 +1,106 @@
+.other-products-item__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: @special-dark-gray-additional;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 13px;
+}
+
+.other-products-item__quantity,
+.other-products-item__cost {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: @special-dark-gray;
+}
+
+.other-products-item__cost {
+  float: right;
+}
+
+.other-products-item__button {
+  margin: 0;
+  margin-top: 12px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: @basic-green;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-green-additional;
+  }
+
+  &:active {
+    color: @white-opacity;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .other-products-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .other-products-item__wrapper {
+    display: grid;
+    grid-template-columns: 193px 90px;
+    text-align: right;
+  }
+
+  .other-products-item__title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .other-products-item__quantity,
+  .other-products-item__cost {
+    float: none;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .other-products-item__button {
+    min-width: 632px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .other-products-item {
+    width: 895px;
+    display: grid;
+    grid-template-columns: 324px 326px 245px;
+    align-items: center;
+  }
+
+  .other-products-item__title {
+    margin: 0;
+  }
+
+  .other-products-item__wrapper {
+    text-align: left;
+    grid-template-columns: 245px 1fr;
+  }
+
+  .other-products-item__button {
+    min-width: 244px;
+    margin-top: 14px;
+    margin-bottom: 16px;
+  }
+}
