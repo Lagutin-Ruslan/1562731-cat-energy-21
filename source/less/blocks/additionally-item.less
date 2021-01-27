@@ -1,0 +1,60 @@
+.additionally-item__label {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -45px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid @special-gray;
+    box-sizing: border-box;
+  }
+}
+
+.additionally-item__checkbox:checked + .additionally-item__label {
+  &::after {
+    content: "";
+    position: absolute;
+    left: -39px;
+    top: 5px;
+    width: 18px;
+    height: 14px;
+    background-image: url("../img/icon-checked.svg");
+  }
+}
+
+.additionally-item__checkbox:disabled + .additionally-item__label {
+  opacity: 0.3;
+}
+
+.additionally-item__checkbox:hover + .additionally-item__label,
+.additionally-item__checkbox:focus + .additionally-item__label {
+  &::before {
+    border: 1px solid @special-gray-darken;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .additionally-item__label {
+    font-size: 20px;
+    line-height: 30px;
+
+    &::before {
+      top: 0;
+    }
+  }
+
+  .additionally-item__checkbox:checked + .additionally-item__label {
+    &::after {
+      top: 7px;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.other-products {
+  overflow: hidden;
+}
+
+.other-products__wrapper {
+  .container(mobile);
+  padding-bottom: 35px;
+  padding-top: 25px;
+}
+
+
+.other-products__title {
+  margin: 0;
+  padding-bottom: 36px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: @black;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    left: 247px;
+    height: 2px;
+    width: 100vw;
+    background-color: @basic-green;
+  }
+}
+
+.other-products__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.other-products__item {
+  border-top: 1px solid @special-gray;
+  padding-top: 13px;
+  padding-bottom: 19px;
+}
+
+.other-products__present {
+  border-top: 1px solid @special-gray;
+  padding-top: 39px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .other-products__wrapper {
+    .container(tablet);
+    padding-bottom: 76px;
+    padding-top: 76px;
+  }
+
+  .other-products__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: 38px;
+    padding-bottom: 80px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 23px;
+      right: 708px;
+      height: 2px;
+      width: 100vw;
+      background-color: @basic-green;
+    }
+
+    &::after {
+      top: 23px;
+      left: 372px;
+      height: 2px;
+      width: 100vw;
+      background-color: @basic-green;
+    }
+  }
+
+  .other-products__item {
+    border: 1px solid @special-gray;
+    padding-right: 38px;
+    padding-left: 37px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .other-products__wrapper {
+    .container(desktop);
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 86px;
+    padding-top: 76px;
+  }
+
+  .other-products__title {
+    margin-left: 0;
+    padding-bottom: 81px;
+
+    &::before {
+      right: 378px;
+      width: 100vw;
+    }
+
+    &::after {
+      left: 372px;
+      width: 100vw;
+    }
+  }
+
+  .other-products__item {
+    border: 0;
+    border-top: 1px solid @special-gray;
+    border-bottom: 1px solid @special-gray;
+    padding: 0;
+  }
+
+  .other-products__present {
+    border: 0;
+    padding: 0;
+    margin-left: 79px;
+  }
+}
